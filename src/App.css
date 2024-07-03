@@ -1,0 +1,146 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 81, 81);
+}
+
+.container {
+  display: flex;
+  height: fit-content;
+  min-height: 40vh;
+    border: 1px solid grey;
+  padding: 1vw;
+  flex-direction: column;
+  align-items: start;
+  font-size: 1.2vw;
+  color: black;
+  background-color: rgb(31, 251, 178);
+  border-radius: 3%;
+  width: 40vw;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todoForm {
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+  width: 98%;
+}
+
+input {
+  width: 80%;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.3vw;
+  padding: 1.2vw 1vw;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+  width: 20%;
+  border-radius: 16px;
+  border-radius: 21px;
+  font-size: 1.3vw;
+  background-color: #d6ff98;
+  cursor: pointer;
+  font-weight: bold;
+  text-wrap: nowrap;
+  border: 2px solid black;
+  padding: 1vw;
+}
+.allTodos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.singleTodo {
+  border-radius: 24px;
+  margin: 1vw;
+  background-color: #b380da;
+  padding: 0.7vw 1vw;
+  display: flex;
+  width: 36vw;
+  align-items: center;
+  margin: 1vw auto;
+}
+
+.todoText {
+  flex: 1;
+  word-break: break-all;
+  font-size: 1.7vw;
+}
+
+.buttonstyle2 {
+  border-radius: 10px;
+  background-color: #7fbc95;
+  cursor: pointer;
+  width: fit-content;
+  padding: 13px 16px;
+}
+
+input[type="checkbox"] {
+  width:fit-content;
+  margin-right: 17px;
+  width: 20px;
+  height: 40px;
+}
+
+.styled-del {
+  text-decoration-thickness: 2px;
+  text-decoration-color: black;
+}
+
+
+
+/* ---------------RESPONSIVE DESIGN----------------- */
+
+@media (max-width: 414px) {
+  .element {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .container {
+    width: 60vw;
+    height: 40vh;
+  }
+
+  .container > h1 {
+    font-size: 18px;
+  }
+
+  .allTodos {
+    width: 92%;
+  }
+
+  .singleTodo {
+    width:100%;
+    padding: 7px 7px;
+  }
+
+  .todoForm {
+    width: 100%;
+  }
+
+  .todoForm input {
+    font-size: 1.3vh;
+      padding: 8px 16px;
+  }
+
+  .todoText {
+    font-size: 1.3vh;
+  }
+
+  button {
+    font-size: 1vh;
+    width: fit-content;
+  }
+}
