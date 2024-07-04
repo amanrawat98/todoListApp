@@ -21,7 +21,7 @@ let iditSetting = (itemId)=> {
   return (
     <ul className="allTodos">
       {todoList?.map((item, index) => (
-        <li className="singleTodo">
+        <li className="singleTodo" key={index}>
           <input type="checkbox" name="todoitem" value={item.checkvalue} onChange={()=> dispatch(updateCheckValue(index))} />
           <span className="todoText" key={item.id}>
             {item.checkvalue ? <del class="styled-del"> {item.todo} </del> : item.todo }

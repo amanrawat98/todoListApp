@@ -13,7 +13,7 @@ const App = () => {
   const [todoId, settodoId] = useState(0);
 
   const dispatch = useDispatch();
-  const todoList = useSelector((state) => state.todolistStore);
+  const todoList = useSelector((state) => state.todolistStore);  // selecting currect store value
 
   const propsGroup = {
     editId,
@@ -41,9 +41,9 @@ const App = () => {
       if (todo.length !== 0) {
         dispatch(addItem({ id: todoId, todo, checkvalue:false }));
         let incrementId = todoId + 1;
-        settodoId(incrementId);
+        settodoId(incrementId);  //set todo item Id
       } else {
-        alert("Input Field is Empty");
+        alert("Input Field is Empty");  // if input field is empty and enter button is pressed
       }
     }
     setTodo(""); // Empty inputBox value after TodoItemi is Added
@@ -53,7 +53,7 @@ const App = () => {
     <div className="App">
       <div className="container">
         <h1>Things to do App: </h1>
-        <TodolistInput handleSubmit={handleSubmit} {...todoformProps} />
+        <TodolistInput handleSubmit={handleSubmit} {...todoformProps} /> 
         <TodoList {...propsGroup} />
       </div>
     </div>
