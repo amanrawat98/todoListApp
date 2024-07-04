@@ -9,8 +9,8 @@
 .container {
   display: flex;
   height: fit-content;
-  min-height: 40vh;
-    border: 1px solid grey;
+  min-height: 60vh;
+  border: 1px solid grey;
   padding: 1vw;
   flex-direction: column;
   align-items: start;
@@ -26,7 +26,6 @@
 .todoForm {
   display: flex;
   justify-content: space-around;
-  width: 450px;
   width: 98%;
 }
 
@@ -44,8 +43,6 @@ button {
   border-radius: 20px;
   margin: 0 5px;
   width: 20%;
-  border-radius: 16px;
-  border-radius: 21px;
   font-size: 1.3vw;
   background-color: #d6ff98;
   cursor: pointer;
@@ -54,6 +51,7 @@ button {
   border: 2px solid black;
   padding: 1vw;
 }
+
 .allTodos {
   list-style: none;
   margin: 0;
@@ -87,7 +85,7 @@ button {
 }
 
 input[type="checkbox"] {
-  width:fit-content;
+  width: fit-content;
   margin-right: 17px;
   width: 20px;
   height: 40px;
@@ -98,9 +96,46 @@ input[type="checkbox"] {
   text-decoration-color: black;
 }
 
-
-
 /* ---------------RESPONSIVE DESIGN----------------- */
+
+@media (max-width: 768px) {
+  .container {
+    width: 62vw;
+    font-size: 2vw;
+    padding: 7px 13px;
+    min-height: 40vh;
+
+  }
+
+  .todoForm > input {
+    font-size: 2.6vw;
+    padding-left: 12px;
+  }
+
+  .todoForm > button {
+    padding: 0;
+    font-size: 2.3vw;
+    padding: 8px 9px;
+    width: fit-content;
+  }
+
+  .allTodos {
+    width: 95%;
+  }
+
+  .singleTodo {
+    width: 100%;
+  }
+
+  .buttonstyle2 {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .todoText {
+    font-size: 2.2vw;
+  }
+}
 
 @media (max-width: 414px) {
   .element {
@@ -109,8 +144,8 @@ input[type="checkbox"] {
   }
 
   .container {
-    width: 60vw;
-    height: 40vh;
+    width: 71vw;
+    padding: 8px;
   }
 
   .container > h1 {
@@ -122,25 +157,45 @@ input[type="checkbox"] {
   }
 
   .singleTodo {
-    width:100%;
-    padding: 7px 7px;
+    width: 100%;
+    padding: 7px;
   }
 
   .todoForm {
     width: 100%;
   }
 
-  .todoForm input {
+  .todoForm > input {
+    width: 75%;
+  }
+
+  .todoForm > button {
+    width: 25%;
     font-size: 1.3vh;
-      padding: 8px 16px;
+  }
+
+  .todoForm input {
+    font-size: 1.8vh;
+    padding: 8px 16px;
   }
 
   .todoText {
-    font-size: 1.3vh;
+    font-size: 1.8vh;
   }
 
   button {
     font-size: 1vh;
     width: fit-content;
+  }
+
+  .buttonstyle2 {
+    padding: 7px 6px;
+    font-size: 0.7rem;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 14px;
   }
 }
